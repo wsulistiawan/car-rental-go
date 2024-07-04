@@ -1,0 +1,22 @@
+input OrderQueryParam {
+    id: Int
+}
+
+input OrderMutationParam {
+    unitId: Int
+    userId: Int
+    price: Int
+    pickupTime: Time
+    returnTime: Time
+    status: OrderStatus
+}
+
+type Order {
+    id: Int
+    unitId: Int
+    userId: Int
+    price: Int
+    pickupTime: Time
+    returnTime: Time
+    status: OrderStatus
+}

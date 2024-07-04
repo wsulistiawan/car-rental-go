@@ -1,0 +1,27 @@
+# GraphQL schema example
+#
+# https://gqlgen.com/getting-started/
+
+type Query {
+    getMasterModel(input: MasterModelQueryParam!): MasterModel
+    getMasterUnit(input: MasterUnitQueryParam!): MasterUnit
+}
+
+type Mutation {
+    createMasterModel(input: MasterModelMutationParam!): MasterModel!
+    createMasterUnit(input: MasterUnitMutationParam!): MasterUnit!
+}
+
+scalar Time
+
+enum UnitStatus {
+  ON_BOARDING,
+  READY,
+  ON_RENT,
+  INACTIVE
+}
+
+enum OrderStatus {
+  CREATED
+  PAID
+}

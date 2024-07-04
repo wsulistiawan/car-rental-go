@@ -1,0 +1,65 @@
+input MasterModelQueryParam {
+    id: Int
+    category: String
+    fuel: String
+    year: Int
+}
+
+input MasterModelMutationParam {
+    name: String!
+    brand: String!
+    type: String!
+    category: String
+    cylinderCapacity: Int!
+    fuel: String!
+    year: Int
+    numberOfDoor: Int!
+    numberOfSeat: Int!
+    numberOfSuitcase: Int
+}
+
+type MasterModel {
+    id: Int!
+    name: String!
+    brand: String!
+    type: String!
+    category: String
+    cylinderCapacity: Int!
+    fuel: String!
+    year: Int
+    numberOfDoor: Int!
+    numberOfSeat: Int!
+    numberOfSuitcase: Int
+}
+
+input MasterUnitQueryParam {
+    id: Int
+    modelId: Int
+    vehicleIdentityNumber: String
+    vehicleRegistrationNumber: String
+}
+
+input MasterUnitMutationParam {
+    modelId: Int!
+    color: String
+    vehicleIdentityNumber: String!
+    engineNumber: String!
+    vehicleOwnershipNumber: String!
+    vehicleRegistrationNumber: String!
+    manufactureYear: Int
+    registrationYear: Int!
+    status: UnitStatus!
+}
+
+type MasterUnit {
+    id: Int
+    modelId: Int
+    color: String
+    vehicleIdentityNumber: String
+    engineNumber: String
+    vehicleOwnershipNumber: String
+    vehicleRegistrationNumber: String
+    manufactureYear: Int
+    registrationYear: Int
+    status: String
+}
