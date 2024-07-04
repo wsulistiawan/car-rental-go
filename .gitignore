@@ -4,3 +4,6 @@
 
 ### Build ###
 *.exe
+
+### Other ###
+.DS_Store
